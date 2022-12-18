@@ -1,0 +1,25 @@
+@use "../sass/Variable";
+
+@mixin SpLandscape() {
+    @media (min-width: Variable.$BreakpointSpLandscape) {
+        @content;
+    }
+}
+
+@mixin Pc() {
+    @media (min-width: Variable.$BreakpointPc) {
+        @content;
+    }
+}
+
+@mixin PcWide() {
+    @media (min-width: Variable.$BreakpointPcWide) {
+        @content;
+    }
+}
+
+@mixin PcFull() {
+    @media (min-width: Variable.$BreakpointPcFull) {
+        @content;
+    }
+}

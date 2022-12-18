@@ -1,3 +1,6 @@
+@use "../../Variable";
+@use "../../Media";
+
 .main {
   width: 960px;
   margin: 0 auto;
@@ -5,6 +8,10 @@
 
 .title {
   margin-bottom: 20px;
+
+  @include Media.Pc {
+    color: red;
+  }
 }
 
 .publishedAt {
