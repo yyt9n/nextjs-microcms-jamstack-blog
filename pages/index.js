@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { client } from '../libs/client'
 import styles from '../styles/sass/styles.module.scss'
+import Head from 'next/head'
+import Layout from "../components/Layout"
 
 export default function Home({ blog }) {
   return (
-    <div className={styles.container}>
+    <Layout headTitle="test">
       <ul>
         {blog.map((blog) => (
           <li key={blog.id}>
@@ -15,7 +17,7 @@ export default function Home({ blog }) {
           </li>
         ))}
       </ul>
-    </div>
+    </Layout>
   )
 }
 
