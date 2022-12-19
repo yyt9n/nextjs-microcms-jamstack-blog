@@ -10,7 +10,7 @@ export default function Footer () {
         <div className={styles.c_footer_hamsauya}>
           <Image src="/hamsauya-icon.png" alt="Vercel Logo" width={100} height={100} />
           <p>
-            Ham Sauyaは手づくりハムソー専門の職人が運営する秘密基地メディアです
+            Ham Sauyaは手づくりハムソー専門の職人が運営するコミュニティメディアです
           </p>
         </div>
         <ul className={styles.c_footer_listContents}>

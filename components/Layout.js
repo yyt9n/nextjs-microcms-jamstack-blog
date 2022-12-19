@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
-import Link from "next/link";
+import styles from '../styles/sass/styles.module.scss'
 
 export default function Layout({ children, headTitle="ハムソーヤ | 手づくりハム・ソーセージ専門メディア" }) {
     return (
@@ -12,7 +12,7 @@ export default function Layout({ children, headTitle="ハムソーヤ | 手づ�
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             </Head>
             <Header />
-            <main className="">
+            <main className={styles.c_layout_main}>
                 {children}
             </main>
             <Footer />
