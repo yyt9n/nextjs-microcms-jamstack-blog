@@ -9,7 +9,7 @@ import { faGraduationCap } from "@fortawesome/free-solid-svg-icons"
 
 export default function Header() {
   return (
-    <div>
+    <div className={styles.c_header_main}>
       <header id={styles.header}>
         {/* メディアロゴ */}
         <div className={styles.headerImg}>
