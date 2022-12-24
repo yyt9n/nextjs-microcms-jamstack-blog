@@ -18,15 +18,15 @@ export default function Header() {
 
         <nav className={styles.c_header_navbar}>
           <Link href="/">
-            <FontAwesomeIcon icon={faBook} style={{ marginRight: "5px" }} />
+            <FontAwesomeIcon icon={faBook} style={{ marginRight: "5px", backgroundColor: "white" }} />
             読む
           </Link>
           <Link href="">
-            <FontAwesomeIcon icon={faMagnifyingGlass} style={{ marginRight: "5px" }} />
+            <FontAwesomeIcon icon={faMagnifyingGlass} style={{ marginRight: "5px", backgroundColor: "white" }} />
             探す
           </Link>
           <Link href="">
-            <FontAwesomeIcon icon={faGraduationCap} style={{ marginRight: "5px" }} />
+            <FontAwesomeIcon icon={faGraduationCap} style={{ marginRight: "5px", backgroundColor: "white" }} />
             学ぶ
           </Link>
         </nav>

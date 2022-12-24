@@ -3,18 +3,42 @@
   padding: 0;
   width: 320px;
   margin: 25px auto;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 10px;
+  padding: 10px;
+
+  > li {
+    background-color: white;
+    margin: 10px auto;
+
+    > a {
+      background-color: white;
+      display: flex;
+      align-items: center;
+    }
+  }
 }
 
 .c_index_article {
   padding: 10px;
+  background-color: white;
+}
+
+.c_index_article_Img {
+  border-radius: 50px;
+  background-color: beige;
 }
 
 .c_index_articleTitle {
   font-size: 16px;
   margin: 0 auto;
+  background-color: white;
 }
 
 .c_index_articleUpdatedAt {
   font-size: 12px;
   color: dimgray;
+  background-color: white;
+  margin: 5px auto 0;
 }

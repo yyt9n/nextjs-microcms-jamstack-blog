@@ -1,8 +1,10 @@
+import styles from '../../styles/sass/styles.module.scss'
+
 export default function JstTimeFormatter({dateTime}) {
   const date = new Date({dateTime}.dateTime);
   let dateText = dateFormat(date)
   return (
-    <p>{dateText}</p>
+    <p className={styles.c_index_articleUpdatedAt}>{dateText}</p>
   )
 }
 
