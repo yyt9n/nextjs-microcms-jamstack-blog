@@ -4,8 +4,9 @@ import { client } from '../libs/client'
 import styles from '../styles/sass/styles.module.scss'
 import Layout from "../components/Layout"
 import JstTimeFormatter from "../components/common/JstTimeFormatter";
+import Pagination from "../components/common/Pagination";
 
-export default function Home({ blog, totalArticleCount }) {
+export default function Home({ blog, totalArticleCount, perPageLimit }) {
   return (
     <Layout>
       <ul className={styles.c_index_articleList}>
@@ -25,18 +26,26 @@ export default function Home({ blog, totalArticleCount }) {
           </li>
         ))}
       </ul>
+      <Pagination totalCount={totalArticleCount} perPage={perPageLimit}/>
     </Layout>
   )
 }
 
 // microCMSのデータを取得
 export const getStaticProps = async () => {
-  const data = await client.get({ endpoint: "blog" });
+  const limit = 5;
+  const queries = {
+    limit: limit,
+    offset: 0,
+  };
+
+  const data = await client.get({ endpoint: "blog", queries: queries });
 
   return {
     props: {
       blog: data.contents,
-      totalArticleCount: data.totalCount
+      totalArticleCount: data.totalCount,
+      perPageLimit: limit,
     }
   }
 }
