@@ -1,18 +1,27 @@
 import { client } from "../../libs/client";
+import Image from "next/image";
+import Layout from "../../components/Layout";
+import JstTimeFormatter from "../../components/common/JstTimeFormatter";
 import styles from '../../styles/sass/styles.module.scss'
 
 export default function BlogId({blog}){
     return (
-        <main className={styles.main}>
-            <h1 className={styles.title}>{blog.title}</h1>
-            <p className={styles.publishedAt}>{blog.publishedAt}</p>
+        <Layout>
+            <header className={styles.c_blogDetailHeader}>
+                <JstTimeFormatter dateTime={blog.updatedAt} />
+                <h1 className={styles.c_blogDetailHeader_title}>{blog.title}</h1>
+                <div className={styles.c_blogDetailHeader_author}>
+                    <Image src={blog.thumbnailImg.url} alt={blog.title} width={50} height={50} className={styles.c_index_article_Img} />
+                    <span>{blog.author[0]}</span>
+                </div>
+            </header>
             <div
                 dangerouslySetInnerHTML={{
                     __html: `${blog.body}`,
                 }}
                 className={styles.post}
             />
-      </main>
+        </Layout>
     )
 }
 
