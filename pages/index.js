@@ -1,8 +1,9 @@
+import { constants } from "../constants/const";
 import Image from "next/image";
 import Link from "next/link";
-import { client } from '../libs/client'
-import styles from '../styles/sass/styles.module.scss'
-import Layout from "../components/Layout"
+import { client } from '../libs/client';
+import styles from '../styles/sass/styles.module.scss';
+import Layout from "../components/Layout";
 import JstTimeFormatter from "../components/common/JstTimeFormatter";
 import Pagination from "../components/common/Pagination";
 
@@ -33,7 +34,7 @@ export default function Home({ blog, totalArticleCount, perPageLimit }) {
 
 // microCMSのデータを取得
 export const getStaticProps = async () => {
-  const limit = 5;
+  const limit = constants.PER_PAGE;
   const queries = {
     limit: limit,
     offset: 0,
